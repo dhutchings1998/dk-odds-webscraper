@@ -1,4 +1,4 @@
-
+import os
 
 BOT_NAME = "dk_odds_webscraper"
 
@@ -8,11 +8,19 @@ NEWSPIDER_MODULE = "dk_odds_webscraper.spiders"
 ROBOTSTXT_OBEY = False
 
 
-DOWNLOAD_HANDLERS = {
-    "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
-    "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
-}
+# DOWNLOAD_HANDLERS = {
+#     "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+#     "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+# }
 
+LOG_ENABLED = True
+LOG_LEVEL = 'DEBUG'  # Set the desired log level
+LOG_FORMAT = '%(asctime)s [%(name)s] %(levelname)s: %(message)s'
+LOG_DATEFORMAT = '%Y-%m-%d %H:%M:%S'
+
+# Configure log file
+LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'logs')
+LOG_FILE = os.path.join(LOG_DIR, 'scrapy.log')
 
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False

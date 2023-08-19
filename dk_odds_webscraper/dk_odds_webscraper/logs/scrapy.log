@@ -1,0 +1,1198 @@
+2023-08-19 14:21:17 [scrapy.utils.log] INFO: Scrapy 2.10.0 started (bot: dk_odds_webscraper)
+2023-08-19 14:21:17 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.9.4, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.9.12 (main, Apr  5 2022, 01:53:17) - [Clang 12.0.0 ], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform macOS-10.16-x86_64-i386-64bit
+2023-08-19 14:21:17 [scrapy.addons] INFO: Enabled addons:
+[]
+2023-08-19 14:21:17 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'dk_odds_webscraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': '/Users/dhutchings/Documents/dk_odds_webscraper/dk_odds_webscraper/dk_odds_webscraper/logs/scrapy.log',
+ 'NEWSPIDER_MODULE': 'dk_odds_webscraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['dk_odds_webscraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2023-08-19 14:21:17 [asyncio] DEBUG: Using selector: KqueueSelector
+2023-08-19 14:21:17 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-08-19 14:21:17 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-08-19 14:21:17 [scrapy.extensions.telnet] INFO: Telnet Password: 0a7ce7f924a3c602
+2023-08-19 14:21:17 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-08-19 14:21:18 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-08-19 14:21:18 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-08-19 14:21:18 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2023-08-19 14:21:18 [scrapy.core.engine] INFO: Spider opened
+2023-08-19 14:21:18 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-08-19 14:21:18 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-08-19 14:21:18 [scrapy-playwright] INFO: Starting download handler
+2023-08-19 14:21:18 [scrapy-playwright] INFO: Starting download handler
+2023-08-19 14:21:24 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): publicsuffix.org:443
+2023-08-19 14:21:24 [urllib3.connectionpool] DEBUG: https://publicsuffix.org:443 "GET /list/public_suffix_list.dat HTTP/1.1" 200 81664
+2023-08-19 14:21:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game> (referer: None)
+2023-08-19 14:21:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game>
+{'team_names': ['BOS Red Sox', 'NY Yankees', 'KC Royals', 'CHI Cubs', 'MIA Marlins', 'LA Dodgers', 'ARI Diamondbacks', 'SD Padres', 'MIL Brewers', 'TEX Rangers', 'PHI Phillies', 'WAS Nationals', 'TB Rays', 'LA Angels', 'TOR Blue Jays', 'CIN Reds', 'SEA Mariners', 'HOU Astros', 'PIT Pirates', 'MIN Twins', 'DET Tigers', 'CLE Guardians', 'NY Mets', 'STL Cardinals', 'SF Giants', 'ATL Braves', 'CHI White Sox', 'COL Rockies', 'ARI Diamondbacks', 'SD Padres', 'BAL Orioles', 'OAK Athletics', 'TB Rays', 'LA Angels', 'MIA Marlins', 'LA Dodgers', 'SEA Mariners', 'HOU Astros', 'TOR Blue Jays', 'CIN Reds', 'DET Tigers', 'CLE Guardians', 'PIT Pirates', 'MIN Twins', 'NY Mets', 'STL Cardinals', 'KC Royals', 'CHI Cubs', 'MIL Brewers', 'TEX Rangers', 'CHI White Sox', 'COL Rockies', 'BAL Orioles', 'OAK Athletics', 'PHI Phillies', 'WAS Nationals']}
+2023-08-19 14:21:24 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-08-19 14:21:24 [scrapy.extensions.feedexport] INFO: Stored json feed (1 items) in: data.json
+2023-08-19 14:21:24 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 283,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 280984,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 6.559579,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 8, 19, 18, 21, 24, 757897),
+ 'httpcompression/response_bytes': 2188121,
+ 'httpcompression/response_count': 1,
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 7,
+ 'log_count/INFO': 13,
+ 'memusage/max': 59199488,
+ 'memusage/startup': 59199488,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2023, 8, 19, 18, 21, 18, 198318)}
+2023-08-19 14:21:24 [scrapy.core.engine] INFO: Spider closed (finished)
+2023-08-19 14:21:24 [scrapy-playwright] INFO: Closing download handler
+2023-08-19 14:21:24 [scrapy-playwright] INFO: Closing download handler
+2023-08-19 14:24:59 [scrapy.utils.log] INFO: Scrapy 2.10.0 started (bot: dk_odds_webscraper)
+2023-08-19 14:24:59 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.9.4, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.9.12 (main, Apr  5 2022, 01:53:17) - [Clang 12.0.0 ], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform macOS-10.16-x86_64-i386-64bit
+2023-08-19 14:24:59 [scrapy.addons] INFO: Enabled addons:
+[]
+2023-08-19 14:24:59 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'dk_odds_webscraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': '/Users/dhutchings/Documents/dk_odds_webscraper/dk_odds_webscraper/dk_odds_webscraper/logs/scrapy.log',
+ 'NEWSPIDER_MODULE': 'dk_odds_webscraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['dk_odds_webscraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2023-08-19 14:24:59 [asyncio] DEBUG: Using selector: KqueueSelector
+2023-08-19 14:24:59 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-08-19 14:24:59 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-08-19 14:25:00 [scrapy.extensions.telnet] INFO: Telnet Password: cedf211b800f53e0
+2023-08-19 14:25:00 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-08-19 14:25:00 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-08-19 14:25:00 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-08-19 14:25:00 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2023-08-19 14:25:00 [scrapy.core.engine] INFO: Spider opened
+2023-08-19 14:25:00 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-08-19 14:25:00 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-08-19 14:25:00 [scrapy-playwright] INFO: Starting download handler
+2023-08-19 14:25:00 [scrapy-playwright] INFO: Starting download handler
+2023-08-19 14:25:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game> (referer: None)
+2023-08-19 14:25:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game>
+{'game_links': []}
+2023-08-19 14:25:06 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-08-19 14:25:06 [scrapy.extensions.feedexport] INFO: Stored json feed (1 items) in: data.json
+2023-08-19 14:25:06 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 283,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 281011,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 6.634117,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 8, 19, 18, 25, 6, 911795),
+ 'httpcompression/response_bytes': 2189181,
+ 'httpcompression/response_count': 1,
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 5,
+ 'log_count/INFO': 13,
+ 'memusage/max': 59150336,
+ 'memusage/startup': 59146240,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2023, 8, 19, 18, 25, 0, 277678)}
+2023-08-19 14:25:06 [scrapy.core.engine] INFO: Spider closed (finished)
+2023-08-19 14:25:06 [scrapy-playwright] INFO: Closing download handler
+2023-08-19 14:25:06 [scrapy-playwright] INFO: Closing download handler
+2023-08-19 14:25:38 [scrapy.utils.log] INFO: Scrapy 2.10.0 started (bot: dk_odds_webscraper)
+2023-08-19 14:25:38 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.9.4, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.9.12 (main, Apr  5 2022, 01:53:17) - [Clang 12.0.0 ], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform macOS-10.16-x86_64-i386-64bit
+2023-08-19 14:25:38 [scrapy.addons] INFO: Enabled addons:
+[]
+2023-08-19 14:25:38 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'dk_odds_webscraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': '/Users/dhutchings/Documents/dk_odds_webscraper/dk_odds_webscraper/dk_odds_webscraper/logs/scrapy.log',
+ 'NEWSPIDER_MODULE': 'dk_odds_webscraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['dk_odds_webscraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2023-08-19 14:25:38 [asyncio] DEBUG: Using selector: KqueueSelector
+2023-08-19 14:25:38 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-08-19 14:25:38 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-08-19 14:25:38 [scrapy.extensions.telnet] INFO: Telnet Password: 0c31e8ddbc0f2d6c
+2023-08-19 14:25:38 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-08-19 14:25:38 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-08-19 14:25:38 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-08-19 14:25:38 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2023-08-19 14:25:38 [scrapy.core.engine] INFO: Spider opened
+2023-08-19 14:25:38 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-08-19 14:25:38 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-08-19 14:25:38 [scrapy-playwright] INFO: Starting download handler
+2023-08-19 14:25:38 [scrapy-playwright] INFO: Starting download handler
+2023-08-19 14:25:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game> (referer: None)
+2023-08-19 14:25:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game>
+{'game_links': ['/event/bos-red-sox-%40-ny-yankees/29240462', '/event/bos-red-sox-%40-ny-yankees/29240462', '/event/kc-royals-%40-chi-cubs/29240463', '/event/kc-royals-%40-chi-cubs/29240463', '/event/mia-marlins-%40-la-dodgers/29245185', '/event/mia-marlins-%40-la-dodgers/29245185', '/event/ari-diamondbacks-%40-sd-padres/29245184', '/event/ari-diamondbacks-%40-sd-padres/29245184', '/event/mil-brewers-%40-tex-rangers/29240467', '/event/mil-brewers-%40-tex-rangers/29240467', '/event/phi-phillies-%40-was-nationals/29240464', '/event/phi-phillies-%40-was-nationals/29240464', '/event/tb-rays-%40-la-angels/29245183', '/event/tb-rays-%40-la-angels/29245183', '/event/tor-blue-jays-%40-cin-reds/29240469', '/event/tor-blue-jays-%40-cin-reds/29240469', '/event/sea-mariners-%40-hou-astros/29240471', '/event/sea-mariners-%40-hou-astros/29240471', '/event/pit-pirates-%40-min-twins/29240476', '/event/pit-pirates-%40-min-twins/29240476', '/event/det-tigers-%40-cle-guardians/29240475', '/event/det-tigers-%40-cle-guardians/29240475', '/event/ny-mets-%40-stl-cardinals/29240474', '/event/ny-mets-%40-stl-cardinals/29240474', '/event/sf-giants-%40-atl-braves/29240473', '/event/sf-giants-%40-atl-braves/29240473', '/event/chi-white-sox-%40-col-rockies/29240472', '/event/chi-white-sox-%40-col-rockies/29240472', '/event/ari-diamondbacks-%40-sd-padres/29240470', '/event/ari-diamondbacks-%40-sd-padres/29240470', '/event/bal-orioles-%40-oak-athletics/29240468', '/event/bal-orioles-%40-oak-athletics/29240468', '/event/tb-rays-%40-la-angels/29240466', '/event/tb-rays-%40-la-angels/29240466', '/event/mia-marlins-%40-la-dodgers/29240465', '/event/mia-marlins-%40-la-dodgers/29240465', '/event/sea-mariners-%40-hou-astros/29244688', '/event/sea-mariners-%40-hou-astros/29244688', '/event/tor-blue-jays-%40-cin-reds/29244692', '/event/tor-blue-jays-%40-cin-reds/29244692', '/event/det-tigers-%40-cle-guardians/29244691', '/event/det-tigers-%40-cle-guardians/29244691', '/event/pit-pirates-%40-min-twins/29244693', '/event/pit-pirates-%40-min-twins/29244693', '/event/ny-mets-%40-stl-cardinals/29244694', '/event/ny-mets-%40-stl-cardinals/29244694', '/event/kc-royals-%40-chi-cubs/29244695', '/event/kc-royals-%40-chi-cubs/29244695', '/event/mil-brewers-%40-tex-rangers/29244697', '/event/mil-brewers-%40-tex-rangers/29244697', '/event/chi-white-sox-%40-col-rockies/29244696', '/event/chi-white-sox-%40-col-rockies/29244696', '/event/bal-orioles-%40-oak-athletics/29244698', '/event/bal-orioles-%40-oak-athletics/29244698', '/event/phi-phillies-%40-was-nationals/29244699', '/event/phi-phillies-%40-was-nationals/29244699']}
+2023-08-19 14:25:45 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-08-19 14:25:45 [scrapy.extensions.feedexport] INFO: Stored json feed (1 items) in: data.json
+2023-08-19 14:25:45 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 283,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 280731,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 6.742406,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 8, 19, 18, 25, 45, 133484),
+ 'httpcompression/response_bytes': 2188640,
+ 'httpcompression/response_count': 1,
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 5,
+ 'log_count/INFO': 13,
+ 'memusage/max': 59183104,
+ 'memusage/startup': 59179008,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2023, 8, 19, 18, 25, 38, 391078)}
+2023-08-19 14:25:45 [scrapy.core.engine] INFO: Spider closed (finished)
+2023-08-19 14:25:45 [scrapy-playwright] INFO: Closing download handler
+2023-08-19 14:25:45 [scrapy-playwright] INFO: Closing download handler
+2023-08-19 14:26:37 [scrapy.utils.log] INFO: Scrapy 2.10.0 started (bot: dk_odds_webscraper)
+2023-08-19 14:26:37 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.9.4, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.9.12 (main, Apr  5 2022, 01:53:17) - [Clang 12.0.0 ], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform macOS-10.16-x86_64-i386-64bit
+2023-08-19 14:26:37 [scrapy.addons] INFO: Enabled addons:
+[]
+2023-08-19 14:26:37 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'dk_odds_webscraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': '/Users/dhutchings/Documents/dk_odds_webscraper/dk_odds_webscraper/dk_odds_webscraper/logs/scrapy.log',
+ 'NEWSPIDER_MODULE': 'dk_odds_webscraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['dk_odds_webscraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2023-08-19 14:26:37 [asyncio] DEBUG: Using selector: KqueueSelector
+2023-08-19 14:26:37 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-08-19 14:26:37 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-08-19 14:26:37 [scrapy.extensions.telnet] INFO: Telnet Password: bc34af3c58edbc09
+2023-08-19 14:26:37 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-08-19 14:26:37 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-08-19 14:26:37 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-08-19 14:26:37 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2023-08-19 14:26:37 [scrapy.core.engine] INFO: Spider opened
+2023-08-19 14:26:37 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-08-19 14:26:37 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-08-19 14:26:37 [scrapy-playwright] INFO: Starting download handler
+2023-08-19 14:26:37 [scrapy-playwright] INFO: Starting download handler
+2023-08-19 14:26:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game> (referer: None)
+2023-08-19 14:26:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game>
+{'game_links': ['/event/tb-rays-%40-la-angels/29245183', '/event/mil-brewers-%40-tex-rangers/29244697', '/event/chi-white-sox-%40-col-rockies/29244696', '/event/bal-orioles-%40-oak-athletics/29244698', '/event/sf-giants-%40-atl-braves/29240473', '/event/det-tigers-%40-cle-guardians/29240475', '/event/ari-diamondbacks-%40-sd-padres/29245184', '/event/kc-royals-%40-chi-cubs/29240463', '/event/sea-mariners-%40-hou-astros/29244688', '/event/tb-rays-%40-la-angels/29240466', '/event/det-tigers-%40-cle-guardians/29244691', '/event/mia-marlins-%40-la-dodgers/29240465', '/event/kc-royals-%40-chi-cubs/29244695', '/event/pit-pirates-%40-min-twins/29240476', '/event/ny-mets-%40-stl-cardinals/29244694', '/event/tor-blue-jays-%40-cin-reds/29244692', '/event/mil-brewers-%40-tex-rangers/29240467', '/event/pit-pirates-%40-min-twins/29244693', '/event/phi-phillies-%40-was-nationals/29244699', '/event/phi-phillies-%40-was-nationals/29240464', '/event/bos-red-sox-%40-ny-yankees/29240462', '/event/bal-orioles-%40-oak-athletics/29240468', '/event/mia-marlins-%40-la-dodgers/29245185', '/event/ari-diamondbacks-%40-sd-padres/29240470', '/event/ny-mets-%40-stl-cardinals/29240474', '/event/tor-blue-jays-%40-cin-reds/29240469', '/event/chi-white-sox-%40-col-rockies/29240472', '/event/sea-mariners-%40-hou-astros/29240471'], 'num_links': 28}
+2023-08-19 14:26:44 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-08-19 14:26:44 [scrapy.extensions.feedexport] INFO: Stored json feed (1 items) in: data.json
+2023-08-19 14:26:44 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 283,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 281040,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 6.916507,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 8, 19, 18, 26, 44, 577835),
+ 'httpcompression/response_bytes': 2189162,
+ 'httpcompression/response_count': 1,
+ 'item_scraped_count': 1,
+ 'log_count/DEBUG': 5,
+ 'log_count/INFO': 13,
+ 'memusage/max': 59191296,
+ 'memusage/startup': 59187200,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2023, 8, 19, 18, 26, 37, 661328)}
+2023-08-19 14:26:44 [scrapy.core.engine] INFO: Spider closed (finished)
+2023-08-19 14:26:44 [scrapy-playwright] INFO: Closing download handler
+2023-08-19 14:26:44 [scrapy-playwright] INFO: Closing download handler
+2023-08-19 14:44:56 [scrapy.utils.log] INFO: Scrapy 2.10.0 started (bot: dk_odds_webscraper)
+2023-08-19 14:44:56 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.9.4, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.9.12 (main, Apr  5 2022, 01:53:17) - [Clang 12.0.0 ], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform macOS-10.16-x86_64-i386-64bit
+2023-08-19 14:44:56 [scrapy.addons] INFO: Enabled addons:
+[]
+2023-08-19 14:44:56 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'dk_odds_webscraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': '/Users/dhutchings/Documents/dk_odds_webscraper/dk_odds_webscraper/dk_odds_webscraper/logs/scrapy.log',
+ 'NEWSPIDER_MODULE': 'dk_odds_webscraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['dk_odds_webscraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2023-08-19 14:44:56 [asyncio] DEBUG: Using selector: KqueueSelector
+2023-08-19 14:44:56 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-08-19 14:44:56 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-08-19 14:44:56 [scrapy.extensions.telnet] INFO: Telnet Password: e4bb2233c28e76df
+2023-08-19 14:44:56 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-08-19 14:44:56 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-08-19 14:44:56 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-08-19 14:44:56 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2023-08-19 14:44:56 [scrapy.core.engine] INFO: Spider opened
+2023-08-19 14:44:56 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-08-19 14:44:56 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-08-19 14:44:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game> (referer: None)
+2023-08-19 14:44:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29244691> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:44:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29244691>
+{'team1': 'DET Tigers', 'team2': 'CLE Guardians'}
+2023-08-19 14:44:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29244694> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:44:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29244695> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:44:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29244694>
+{'team1': 'NY Mets', 'team2': 'STL Cardinals'}
+2023-08-19 14:44:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29244695>
+{'team1': 'KC Royals', 'team2': 'CHI Cubs'}
+2023-08-19 14:44:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bos-red-sox-%40-ny-yankees/29240462> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:44:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29240476> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:44:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29240464> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:44:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bos-red-sox-%40-ny-yankees/29240462>
+{'team1': 'BOS Red Sox', 'team2': 'NY Yankees'}
+2023-08-19 14:44:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29240463> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:44:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29244698> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:44:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29240476>
+{'team1': 'PIT Pirates', 'team2': 'MIN Twins'}
+2023-08-19 14:44:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29240464>
+{'team1': 'PHI Phillies', 'team2': 'WAS Nationals'}
+2023-08-19 14:44:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29240463>
+{'team1': 'KC Royals', 'team2': 'CHI Cubs'}
+2023-08-19 14:44:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29244698>
+{'team1': 'BAL Orioles', 'team2': 'OAK Athletics'}
+2023-08-19 14:45:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29240470> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29244693> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29240469> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29240470>
+{'team1': 'ARI Diamondbacks', 'team2': 'SD Padres'}
+2023-08-19 14:45:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29240465> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29245184> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29244693>
+{'team1': 'PIT Pirates', 'team2': 'MIN Twins'}
+2023-08-19 14:45:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29240469>
+{'team1': 'TOR Blue Jays', 'team2': 'CIN Reds'}
+2023-08-19 14:45:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29240465>
+{'team1': 'MIA Marlins', 'team2': 'LA Dodgers'}
+2023-08-19 14:45:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29245184>
+{'team1': 'ARI Diamondbacks', 'team2': 'SD Padres'}
+2023-08-19 14:45:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29240468> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29240468>
+{'team1': 'BAL Orioles', 'team2': 'OAK Athletics'}
+2023-08-19 14:45:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29245183> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29240467> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29244688> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29245183>
+{'team1': 'TB Rays', 'team2': 'LA Angels'}
+2023-08-19 14:45:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29240467>
+{'team1': 'MIL Brewers', 'team2': 'TEX Rangers'}
+2023-08-19 14:45:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29244688>
+{'team1': 'SEA Mariners', 'team2': 'HOU Astros'}
+2023-08-19 14:45:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29244692> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29244692>
+{'team1': 'TOR Blue Jays', 'team2': 'CIN Reds'}
+2023-08-19 14:45:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29244696> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29240472> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29240474> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29244696>
+{'team1': 'CHI White Sox', 'team2': 'COL Rockies'}
+2023-08-19 14:45:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29240471> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29240472>
+{'team1': 'CHI White Sox', 'team2': 'COL Rockies'}
+2023-08-19 14:45:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29240474>
+{'team1': 'NY Mets', 'team2': 'STL Cardinals'}
+2023-08-19 14:45:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29240471>
+{'team1': 'SEA Mariners', 'team2': 'HOU Astros'}
+2023-08-19 14:45:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29244697> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29244697>
+{'team1': 'MIL Brewers', 'team2': 'TEX Rangers'}
+2023-08-19 14:45:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29244699> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29244699>
+{'team1': 'PHI Phillies', 'team2': 'WAS Nationals'}
+2023-08-19 14:45:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29240475> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29240475>
+{'team1': 'DET Tigers', 'team2': 'CLE Guardians'}
+2023-08-19 14:45:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29240466> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sf-giants-%40-atl-braves/29240473> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29245185> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:45:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29240466>
+{'team1': 'TB Rays', 'team2': 'LA Angels'}
+2023-08-19 14:45:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sf-giants-%40-atl-braves/29240473>
+{'team1': 'SF Giants', 'team2': 'ATL Braves'}
+2023-08-19 14:45:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29245185>
+{'team1': 'MIA Marlins', 'team2': 'LA Dodgers'}
+2023-08-19 14:45:03 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-08-19 14:45:03 [scrapy.extensions.feedexport] INFO: Stored json feed (28 items) in: data.json
+2023-08-19 14:45:03 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 47501,
+ 'downloader/request_count': 29,
+ 'downloader/request_method_count/GET': 29,
+ 'downloader/response_bytes': 7999054,
+ 'downloader/response_count': 29,
+ 'downloader/response_status_count/200': 29,
+ 'elapsed_time_seconds': 7.439202,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 8, 19, 18, 45, 3, 678520),
+ 'httpcompression/response_bytes': 62540965,
+ 'httpcompression/response_count': 29,
+ 'item_scraped_count': 28,
+ 'log_count/DEBUG': 60,
+ 'log_count/INFO': 11,
+ 'memusage/max': 54947840,
+ 'memusage/startup': 54947840,
+ 'request_depth_max': 1,
+ 'response_received_count': 29,
+ 'scheduler/dequeued': 29,
+ 'scheduler/dequeued/memory': 29,
+ 'scheduler/enqueued': 29,
+ 'scheduler/enqueued/memory': 29,
+ 'start_time': datetime.datetime(2023, 8, 19, 18, 44, 56, 239318)}
+2023-08-19 14:45:03 [scrapy.core.engine] INFO: Spider closed (finished)
+2023-08-19 14:54:55 [scrapy.utils.log] INFO: Scrapy 2.10.0 started (bot: dk_odds_webscraper)
+2023-08-19 14:54:55 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.9.4, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.9.12 (main, Apr  5 2022, 01:53:17) - [Clang 12.0.0 ], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform macOS-10.16-x86_64-i386-64bit
+2023-08-19 14:54:55 [scrapy.addons] INFO: Enabled addons:
+[]
+2023-08-19 14:54:55 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'dk_odds_webscraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': '/Users/dhutchings/Documents/dk_odds_webscraper/dk_odds_webscraper/dk_odds_webscraper/logs/scrapy.log',
+ 'NEWSPIDER_MODULE': 'dk_odds_webscraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['dk_odds_webscraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2023-08-19 14:54:55 [asyncio] DEBUG: Using selector: KqueueSelector
+2023-08-19 14:54:55 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-08-19 14:54:55 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-08-19 14:54:55 [scrapy.extensions.telnet] INFO: Telnet Password: 63f6f273db219ebc
+2023-08-19 14:54:55 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-08-19 14:54:55 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-08-19 14:54:55 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-08-19 14:54:55 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2023-08-19 14:54:55 [scrapy.core.engine] INFO: Spider opened
+2023-08-19 14:54:55 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-08-19 14:54:55 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-08-19 14:54:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game> (referer: None)
+2023-08-19 14:54:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29244692> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:54:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29244692>
+{'team1': 'TOR Blue Jays', 'team2': 'CIN Reds', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:54:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29244696> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:54:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29244688> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:54:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29244696>
+{'team1': 'CHI White Sox', 'team2': 'COL Rockies', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:54:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29244697> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:54:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29244688>
+{'team1': 'SEA Mariners', 'team2': 'HOU Astros', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:54:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29244697>
+{'team1': 'MIL Brewers', 'team2': 'TEX Rangers', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:54:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29244698> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:54:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29240463> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:54:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29245185> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:54:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29244698>
+{'team1': 'BAL Orioles', 'team2': 'OAK Athletics', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:54:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29240463>
+{'team1': 'KC Royals', 'team2': 'CHI Cubs', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:54:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29245185>
+{'team1': 'MIA Marlins', 'team2': 'LA Dodgers', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:54:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29240466> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:54:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29240466>
+{'team1': 'TB Rays', 'team2': 'LA Angels', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:54:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29240467> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:54:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29240472> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:54:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29240467>
+{'team1': 'MIL Brewers', 'team2': 'TEX Rangers', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:54:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29240472>
+{'team1': 'CHI White Sox', 'team2': 'COL Rockies', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sf-giants-%40-atl-braves/29240473> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sf-giants-%40-atl-braves/29240473>
+{'team1': 'SF Giants', 'team2': 'ATL Braves', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29240469> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29244699> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29240469>
+{'team1': 'TOR Blue Jays', 'team2': 'CIN Reds', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29244699>
+{'team1': 'PHI Phillies', 'team2': 'WAS Nationals', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29240474> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29240475> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bos-red-sox-%40-ny-yankees/29240462> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29240474>
+{'team1': 'NY Mets', 'team2': 'STL Cardinals', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29240465> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29240475>
+{'team1': 'DET Tigers', 'team2': 'CLE Guardians', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bos-red-sox-%40-ny-yankees/29240462>
+{'team1': 'BOS Red Sox', 'team2': 'NY Yankees', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29240465>
+{'team1': 'MIA Marlins', 'team2': 'LA Dodgers', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29245184> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29245184>
+{'team1': 'ARI Diamondbacks', 'team2': 'SD Padres', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29244694> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29244691> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29244694>
+{'team1': 'NY Mets', 'team2': 'STL Cardinals', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29240468> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29240471> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29244691>
+{'team1': 'DET Tigers', 'team2': 'CLE Guardians', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29244693> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29240468>
+{'team1': 'BAL Orioles', 'team2': 'OAK Athletics', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29240471>
+{'team1': 'SEA Mariners', 'team2': 'HOU Astros', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29244693>
+{'team1': 'PIT Pirates', 'team2': 'MIN Twins', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29240464> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29240470> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29240464>
+{'team1': 'PHI Phillies', 'team2': 'WAS Nationals', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29240470>
+{'team1': 'ARI Diamondbacks', 'team2': 'SD Padres', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29240476> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29240476>
+{'team1': 'PIT Pirates', 'team2': 'MIN Twins', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29245183> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29245183>
+{'team1': 'TB Rays', 'team2': 'LA Angels', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29244695> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 14:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29244695>
+{'team1': 'KC Royals', 'team2': 'CHI Cubs', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 14:55:03 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-08-19 14:55:03 [scrapy.extensions.feedexport] INFO: Stored json feed (28 items) in: data.json
+2023-08-19 14:55:03 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 47503,
+ 'downloader/request_count': 29,
+ 'downloader/request_method_count/GET': 29,
+ 'downloader/response_bytes': 8004303,
+ 'downloader/response_count': 29,
+ 'downloader/response_status_count/200': 29,
+ 'elapsed_time_seconds': 8.269028,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 8, 19, 18, 55, 3, 890575),
+ 'httpcompression/response_bytes': 62608132,
+ 'httpcompression/response_count': 29,
+ 'item_scraped_count': 28,
+ 'log_count/DEBUG': 60,
+ 'log_count/INFO': 11,
+ 'memusage/max': 54964224,
+ 'memusage/startup': 54964224,
+ 'request_depth_max': 1,
+ 'response_received_count': 29,
+ 'scheduler/dequeued': 29,
+ 'scheduler/dequeued/memory': 29,
+ 'scheduler/enqueued': 29,
+ 'scheduler/enqueued/memory': 29,
+ 'start_time': datetime.datetime(2023, 8, 19, 18, 54, 55, 621547)}
+2023-08-19 14:55:03 [scrapy.core.engine] INFO: Spider closed (finished)
+2023-08-19 14:57:41 [scrapy.utils.log] INFO: Scrapy 2.10.0 started (bot: dk_odds_webscraper)
+2023-08-19 14:57:41 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.9.4, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.9.12 (main, Apr  5 2022, 01:53:17) - [Clang 12.0.0 ], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform macOS-10.16-x86_64-i386-64bit
+2023-08-19 14:57:41 [scrapy.addons] INFO: Enabled addons:
+[]
+2023-08-19 14:57:41 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'dk_odds_webscraper',
+ 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOGSTATS_INTERVAL': 0,
+ 'LOG_FILE': '/Users/dhutchings/Documents/dk_odds_webscraper/dk_odds_webscraper/dk_odds_webscraper/logs/scrapy.log',
+ 'NEWSPIDER_MODULE': 'dk_odds_webscraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['dk_odds_webscraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2023-08-19 14:57:41 [asyncio] DEBUG: Using selector: KqueueSelector
+2023-08-19 14:57:41 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-08-19 14:57:41 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-08-19 14:57:41 [scrapy.extensions.telnet] INFO: Telnet Password: 5e29e54850173ded
+2023-08-19 14:57:41 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage']
+2023-08-19 14:57:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-08-19 14:57:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-08-19 14:57:41 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2023-08-19 14:57:41 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-08-19 14:57:41 [scrapy.core.engine] INFO: Spider opened
+2023-08-19 14:57:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29245185> (referer: None)
+2023-08-19 14:59:54 [scrapy.utils.log] INFO: Scrapy 2.10.0 started (bot: dk_odds_webscraper)
+2023-08-19 14:59:54 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.9.4, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.9.12 (main, Apr  5 2022, 01:53:17) - [Clang 12.0.0 ], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform macOS-10.16-x86_64-i386-64bit
+2023-08-19 14:59:54 [scrapy.addons] INFO: Enabled addons:
+[]
+2023-08-19 14:59:54 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'dk_odds_webscraper',
+ 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOGSTATS_INTERVAL': 0,
+ 'LOG_FILE': '/Users/dhutchings/Documents/dk_odds_webscraper/dk_odds_webscraper/dk_odds_webscraper/logs/scrapy.log',
+ 'NEWSPIDER_MODULE': 'dk_odds_webscraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['dk_odds_webscraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2023-08-19 14:59:54 [asyncio] DEBUG: Using selector: KqueueSelector
+2023-08-19 14:59:54 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-08-19 14:59:54 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-08-19 14:59:54 [scrapy.extensions.telnet] INFO: Telnet Password: dfd7d1967710b73b
+2023-08-19 14:59:54 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage']
+2023-08-19 14:59:54 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-08-19 14:59:54 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-08-19 14:59:54 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2023-08-19 14:59:54 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-08-19 14:59:54 [scrapy.core.engine] INFO: Spider opened
+2023-08-19 14:59:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29245185> (referer: None)
+2023-08-19 15:13:15 [scrapy.utils.log] INFO: Scrapy 2.10.0 started (bot: dk_odds_webscraper)
+2023-08-19 15:13:15 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.9.4, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.9.12 (main, Apr  5 2022, 01:53:17) - [Clang 12.0.0 ], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform macOS-10.16-x86_64-i386-64bit
+2023-08-19 15:13:15 [scrapy.addons] INFO: Enabled addons:
+[]
+2023-08-19 15:13:15 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'dk_odds_webscraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': '/Users/dhutchings/Documents/dk_odds_webscraper/dk_odds_webscraper/dk_odds_webscraper/logs/scrapy.log',
+ 'NEWSPIDER_MODULE': 'dk_odds_webscraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['dk_odds_webscraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2023-08-19 15:13:15 [asyncio] DEBUG: Using selector: KqueueSelector
+2023-08-19 15:13:15 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-08-19 15:13:15 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-08-19 15:13:15 [scrapy.extensions.telnet] INFO: Telnet Password: 511f796779291971
+2023-08-19 15:13:15 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-08-19 15:13:15 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-08-19 15:13:15 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-08-19 15:13:15 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2023-08-19 15:13:15 [scrapy.core.engine] INFO: Spider opened
+2023-08-19 15:13:15 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-08-19 15:13:15 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-08-19 15:13:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game> (referer: None)
+2023-08-19 15:13:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29244696> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29244696>
+{'team1': 'CHI White Sox', 'team2': 'COL Rockies', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29244699> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29240471> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29244698> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29240472> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29244699>
+{'team1': 'PHI Phillies', 'team2': 'WAS Nationals', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29240471>
+{'team1': 'SEA Mariners', 'team2': 'HOU Astros', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29244698>
+{'team1': 'BAL Orioles', 'team2': 'OAK Athletics', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29244688> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29244693> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29244692> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29240472>
+{'team1': 'CHI White Sox', 'team2': 'COL Rockies', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29244688>
+{'team1': 'SEA Mariners', 'team2': 'HOU Astros', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29244693>
+{'team1': 'PIT Pirates', 'team2': 'MIN Twins', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29244692>
+{'team1': 'TOR Blue Jays', 'team2': 'CIN Reds', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29244694> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29244694>
+{'team1': 'NY Mets', 'team2': 'STL Cardinals', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29240475> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29240475>
+{'team1': 'DET Tigers', 'team2': 'CLE Guardians', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29240474> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29245185> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29240474>
+{'team1': 'NY Mets', 'team2': 'STL Cardinals', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29245185>
+{'team1': 'MIA Marlins', 'team2': 'LA Dodgers', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29244697> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29244697>
+{'team1': 'MIL Brewers', 'team2': 'TEX Rangers', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29240464> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sf-giants-%40-atl-braves/29240473> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29240464>
+{'team1': 'PHI Phillies', 'team2': 'WAS Nationals', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sf-giants-%40-atl-braves/29240473>
+{'team1': 'SF Giants', 'team2': 'ATL Braves', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29240469> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29240469>
+{'team1': 'TOR Blue Jays', 'team2': 'CIN Reds', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29240465> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29240466> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29244695> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29240465>
+{'team1': 'MIA Marlins', 'team2': 'LA Dodgers', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29240466>
+{'team1': 'TB Rays', 'team2': 'LA Angels', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bos-red-sox-%40-ny-yankees/29240462> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29244695>
+{'team1': 'KC Royals', 'team2': 'CHI Cubs', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bos-red-sox-%40-ny-yankees/29240462>
+{'team1': 'BOS Red Sox', 'team2': 'NY Yankees', 'run_line_1': '-5.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29240470> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29240463> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29240470>
+{'team1': 'ARI Diamondbacks', 'team2': 'SD Padres', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29240463>
+{'team1': 'KC Royals', 'team2': 'CHI Cubs', 'run_line_1': '+3.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29245183> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29240468> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29245183>
+{'team1': 'TB Rays', 'team2': 'LA Angels', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29240468>
+{'team1': 'BAL Orioles', 'team2': 'OAK Athletics', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29240467> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29240467>
+{'team1': 'MIL Brewers', 'team2': 'TEX Rangers', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29244691> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29240476> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29244691>
+{'team1': 'DET Tigers', 'team2': 'CLE Guardians', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29240476>
+{'team1': 'PIT Pirates', 'team2': 'MIN Twins', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29245184> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:13:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29245184>
+{'team1': 'ARI Diamondbacks', 'team2': 'SD Padres', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:13:22 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-08-19 15:13:22 [scrapy.extensions.feedexport] INFO: Stored json feed (28 items) in: data.json
+2023-08-19 15:13:22 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 47502,
+ 'downloader/request_count': 29,
+ 'downloader/request_method_count/GET': 29,
+ 'downloader/response_bytes': 7976857,
+ 'downloader/response_count': 29,
+ 'downloader/response_status_count/200': 29,
+ 'elapsed_time_seconds': 7.431115,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 8, 19, 19, 13, 22, 869920),
+ 'httpcompression/response_bytes': 62552188,
+ 'httpcompression/response_count': 29,
+ 'item_scraped_count': 28,
+ 'log_count/DEBUG': 60,
+ 'log_count/INFO': 11,
+ 'memusage/max': 54865920,
+ 'memusage/startup': 54865920,
+ 'request_depth_max': 1,
+ 'response_received_count': 29,
+ 'scheduler/dequeued': 29,
+ 'scheduler/dequeued/memory': 29,
+ 'scheduler/enqueued': 29,
+ 'scheduler/enqueued/memory': 29,
+ 'start_time': datetime.datetime(2023, 8, 19, 19, 13, 15, 438805)}
+2023-08-19 15:13:22 [scrapy.core.engine] INFO: Spider closed (finished)
+2023-08-19 15:18:56 [scrapy.utils.log] INFO: Scrapy 2.10.0 started (bot: dk_odds_webscraper)
+2023-08-19 15:18:56 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.9.4, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.9.12 (main, Apr  5 2022, 01:53:17) - [Clang 12.0.0 ], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform macOS-10.16-x86_64-i386-64bit
+2023-08-19 15:18:56 [scrapy.addons] INFO: Enabled addons:
+[]
+2023-08-19 15:18:56 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'dk_odds_webscraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': '/Users/dhutchings/Documents/dk_odds_webscraper/dk_odds_webscraper/dk_odds_webscraper/logs/scrapy.log',
+ 'NEWSPIDER_MODULE': 'dk_odds_webscraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['dk_odds_webscraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2023-08-19 15:18:56 [asyncio] DEBUG: Using selector: KqueueSelector
+2023-08-19 15:18:56 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-08-19 15:18:56 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-08-19 15:18:56 [scrapy.extensions.telnet] INFO: Telnet Password: 3f7252db7a446763
+2023-08-19 15:18:56 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-08-19 15:18:56 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-08-19 15:18:56 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-08-19 15:18:56 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2023-08-19 15:18:56 [scrapy.core.engine] INFO: Spider opened
+2023-08-19 15:18:56 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-08-19 15:18:56 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-08-19 15:18:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game> (referer: None)
+2023-08-19 15:19:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29245183> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29245183>
+{'team1': 'TB Rays', 'team2': 'LA Angels', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bos-red-sox-%40-ny-yankees/29240462> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bos-red-sox-%40-ny-yankees/29240462>
+{'team1': 'BOS Red Sox', 'team2': 'NY Yankees', 'run_line_1': '-5.5', 'run_line_1_odds': None, 'run_line_2': '+5.5', 'run_line_2_odds': None}
+2023-08-19 15:19:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29240469> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29240469>
+{'team1': 'TOR Blue Jays', 'team2': 'CIN Reds', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29240470> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29244692> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29240470>
+{'team1': 'ARI Diamondbacks', 'team2': 'SD Padres', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29240465> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29240472> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29240475> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29244692>
+{'team1': 'TOR Blue Jays', 'team2': 'CIN Reds', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29240465>
+{'team1': 'MIA Marlins', 'team2': 'LA Dodgers', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29240472>
+{'team1': 'CHI White Sox', 'team2': 'COL Rockies', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29240475>
+{'team1': 'DET Tigers', 'team2': 'CLE Guardians', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29240466> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29240466>
+{'team1': 'TB Rays', 'team2': 'LA Angels', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29240471> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29240471>
+{'team1': 'SEA Mariners', 'team2': 'HOU Astros', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29240476> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29240476>
+{'team1': 'PIT Pirates', 'team2': 'MIN Twins', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29240468> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29244688> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29240468>
+{'team1': 'BAL Orioles', 'team2': 'OAK Athletics', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29244688>
+{'team1': 'SEA Mariners', 'team2': 'HOU Astros', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29244693> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29244691> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29244693>
+{'team1': 'PIT Pirates', 'team2': 'MIN Twins', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29244691>
+{'team1': 'DET Tigers', 'team2': 'CLE Guardians', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29240474> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29244699> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29240474>
+{'team1': 'NY Mets', 'team2': 'STL Cardinals', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29244699>
+{'team1': 'PHI Phillies', 'team2': 'WAS Nationals', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29244695> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29244695>
+{'team1': 'KC Royals', 'team2': 'CHI Cubs', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:19:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29244698> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29244698>
+{'team1': 'BAL Orioles', 'team2': 'OAK Athletics', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sf-giants-%40-atl-braves/29240473> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sf-giants-%40-atl-braves/29240473>
+{'team1': 'SF Giants', 'team2': 'ATL Braves', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29244694> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29244694>
+{'team1': 'NY Mets', 'team2': 'STL Cardinals', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29245184> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29245184>
+{'team1': 'ARI Diamondbacks', 'team2': 'SD Padres', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29240464> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29240467> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29240464>
+{'team1': 'PHI Phillies', 'team2': 'WAS Nationals', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29244696> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29240467>
+{'team1': 'MIL Brewers', 'team2': 'TEX Rangers', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29244696>
+{'team1': 'CHI White Sox', 'team2': 'COL Rockies', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29240463> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29240463>
+{'team1': 'KC Royals', 'team2': 'CHI Cubs', 'run_line_1': '+3.5', 'run_line_1_odds': None, 'run_line_2': '-3.5', 'run_line_2_odds': None}
+2023-08-19 15:19:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29245185> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29244697> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:19:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29245185>
+{'team1': 'MIA Marlins', 'team2': 'LA Dodgers', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': None}
+2023-08-19 15:19:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29244697>
+{'team1': 'MIL Brewers', 'team2': 'TEX Rangers', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:19:06 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-08-19 15:19:06 [scrapy.extensions.feedexport] INFO: Stored json feed (28 items) in: data.json
+2023-08-19 15:19:06 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 47503,
+ 'downloader/request_count': 29,
+ 'downloader/request_method_count/GET': 29,
+ 'downloader/response_bytes': 7968741,
+ 'downloader/response_count': 29,
+ 'downloader/response_status_count/200': 29,
+ 'elapsed_time_seconds': 9.817246,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 8, 19, 19, 19, 6, 754052),
+ 'httpcompression/response_bytes': 62390149,
+ 'httpcompression/response_count': 29,
+ 'item_scraped_count': 28,
+ 'log_count/DEBUG': 60,
+ 'log_count/INFO': 11,
+ 'memusage/max': 55054336,
+ 'memusage/startup': 55054336,
+ 'request_depth_max': 1,
+ 'response_received_count': 29,
+ 'scheduler/dequeued': 29,
+ 'scheduler/dequeued/memory': 29,
+ 'scheduler/enqueued': 29,
+ 'scheduler/enqueued/memory': 29,
+ 'start_time': datetime.datetime(2023, 8, 19, 19, 18, 56, 936806)}
+2023-08-19 15:19:06 [scrapy.core.engine] INFO: Spider closed (finished)
+2023-08-19 15:22:12 [scrapy.utils.log] INFO: Scrapy 2.10.0 started (bot: dk_odds_webscraper)
+2023-08-19 15:22:12 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.9.4, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.9.12 (main, Apr  5 2022, 01:53:17) - [Clang 12.0.0 ], pyOpenSSL 23.2.0 (OpenSSL 3.1.2 1 Aug 2023), cryptography 41.0.3, Platform macOS-10.16-x86_64-i386-64bit
+2023-08-19 15:22:12 [scrapy.addons] INFO: Enabled addons:
+[]
+2023-08-19 15:22:12 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'dk_odds_webscraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': '/Users/dhutchings/Documents/dk_odds_webscraper/dk_odds_webscraper/dk_odds_webscraper/logs/scrapy.log',
+ 'NEWSPIDER_MODULE': 'dk_odds_webscraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['dk_odds_webscraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2023-08-19 15:22:12 [asyncio] DEBUG: Using selector: KqueueSelector
+2023-08-19 15:22:12 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-08-19 15:22:12 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-08-19 15:22:12 [scrapy.extensions.telnet] INFO: Telnet Password: c6e74bddbf1fbfd2
+2023-08-19 15:22:12 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-08-19 15:22:12 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-08-19 15:22:12 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-08-19 15:22:12 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2023-08-19 15:22:12 [scrapy.core.engine] INFO: Spider opened
+2023-08-19 15:22:12 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-08-19 15:22:12 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-08-19 15:22:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game> (referer: None)
+2023-08-19 15:22:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29244691> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29244691>
+{'team1': 'DET Tigers', 'team2': 'CLE Guardians', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': '−175'}
+2023-08-19 15:22:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29240466> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29240466>
+{'team1': 'TB Rays', 'team2': 'LA Angels', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': '−142'}
+2023-08-19 15:22:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29244697> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29244693> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29240476> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29240464> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29244697>
+{'team1': 'MIL Brewers', 'team2': 'TEX Rangers', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': '+110'}
+2023-08-19 15:22:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sf-giants-%40-atl-braves/29240473> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29244693>
+{'team1': 'PIT Pirates', 'team2': 'MIN Twins', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': '+150'}
+2023-08-19 15:22:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/pit-pirates-%40-min-twins/29240476>
+{'team1': 'PIT Pirates', 'team2': 'MIN Twins', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': '+120'}
+2023-08-19 15:22:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29240464>
+{'team1': 'PHI Phillies', 'team2': 'WAS Nationals', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': '−122'}
+2023-08-19 15:22:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29240467> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sf-giants-%40-atl-braves/29240473>
+{'team1': 'SF Giants', 'team2': 'ATL Braves', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': '+164'}
+2023-08-19 15:22:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mil-brewers-%40-tex-rangers/29240467>
+{'team1': 'MIL Brewers', 'team2': 'TEX Rangers', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': '+150'}
+2023-08-19 15:22:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29244695> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29244695>
+{'team1': 'KC Royals', 'team2': 'CHI Cubs', 'run_line_1': None, 'run_line_1_odds': None, 'run_line_2': None, 'run_line_2_odds': None}
+2023-08-19 15:22:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29240470> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29240475> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29240470>
+{'team1': 'ARI Diamondbacks', 'team2': 'SD Padres', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': '+114'}
+2023-08-19 15:22:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/det-tigers-%40-cle-guardians/29240475>
+{'team1': 'DET Tigers', 'team2': 'CLE Guardians', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': '+130'}
+2023-08-19 15:22:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29244699> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29240469> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29245185> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29240474> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/phi-phillies-%40-was-nationals/29244699>
+{'team1': 'PHI Phillies', 'team2': 'WAS Nationals', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': '+120'}
+2023-08-19 15:22:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29240469>
+{'team1': 'TOR Blue Jays', 'team2': 'CIN Reds', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': '−125'}
+2023-08-19 15:22:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29245185>
+{'team1': 'MIA Marlins', 'team2': 'LA Dodgers', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': '+120'}
+2023-08-19 15:22:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29240474>
+{'team1': 'NY Mets', 'team2': 'STL Cardinals', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': '−180'}
+2023-08-19 15:22:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29240463> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/kc-royals-%40-chi-cubs/29240463>
+{'team1': 'KC Royals', 'team2': 'CHI Cubs', 'run_line_1': '+3.5', 'run_line_1_odds': None, 'run_line_2': '-3.5', 'run_line_2_odds': '−125'}
+2023-08-19 15:22:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bos-red-sox-%40-ny-yankees/29240462> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29245184> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bos-red-sox-%40-ny-yankees/29240462>
+{'team1': 'BOS Red Sox', 'team2': 'NY Yankees', 'run_line_1': '-5.5', 'run_line_1_odds': None, 'run_line_2': '+5.5', 'run_line_2_odds': '+175'}
+2023-08-19 15:22:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29240472> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ari-diamondbacks-%40-sd-padres/29245184>
+{'team1': 'ARI Diamondbacks', 'team2': 'SD Padres', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': '−140'}
+2023-08-19 15:22:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29240472>
+{'team1': 'CHI White Sox', 'team2': 'COL Rockies', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': '−148'}
+2023-08-19 15:22:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29245183> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tb-rays-%40-la-angels/29245183>
+{'team1': 'TB Rays', 'team2': 'LA Angels', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': '−130'}
+2023-08-19 15:22:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29244696> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29244692> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/chi-white-sox-%40-col-rockies/29244696>
+{'team1': 'CHI White Sox', 'team2': 'COL Rockies', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': '−105'}
+2023-08-19 15:22:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29240468> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/tor-blue-jays-%40-cin-reds/29244692>
+{'team1': 'TOR Blue Jays', 'team2': 'CIN Reds', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': '−162'}
+2023-08-19 15:22:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29244694> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29240468>
+{'team1': 'BAL Orioles', 'team2': 'OAK Athletics', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': '+100'}
+2023-08-19 15:22:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29244698> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/ny-mets-%40-stl-cardinals/29244694>
+{'team1': 'NY Mets', 'team2': 'STL Cardinals', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': '+136'}
+2023-08-19 15:22:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/bal-orioles-%40-oak-athletics/29244698>
+{'team1': 'BAL Orioles', 'team2': 'OAK Athletics', 'run_line_1': '-1.5', 'run_line_1_odds': None, 'run_line_2': '+1.5', 'run_line_2_odds': '−112'}
+2023-08-19 15:22:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29240465> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29244688> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/mia-marlins-%40-la-dodgers/29240465>
+{'team1': 'MIA Marlins', 'team2': 'LA Dodgers', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': '+114'}
+2023-08-19 15:22:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29244688>
+{'team1': 'SEA Mariners', 'team2': 'HOU Astros', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': '+114'}
+2023-08-19 15:22:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29240471> (referer: https://sportsbook.draftkings.com/leagues/baseball/mlb?category=game-lines&subcategory=game)
+2023-08-19 15:22:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://sportsbook.draftkings.com/event/sea-mariners-%40-hou-astros/29240471>
+{'team1': 'SEA Mariners', 'team2': 'HOU Astros', 'run_line_1': '+1.5', 'run_line_1_odds': None, 'run_line_2': '-1.5', 'run_line_2_odds': '+136'}
+2023-08-19 15:22:20 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-08-19 15:22:20 [scrapy.extensions.feedexport] INFO: Stored json feed (28 items) in: data.json
+2023-08-19 15:22:20 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 47498,
+ 'downloader/request_count': 29,
+ 'downloader/request_method_count/GET': 29,
+ 'downloader/response_bytes': 7970980,
+ 'downloader/response_count': 29,
+ 'downloader/response_status_count/200': 29,
+ 'elapsed_time_seconds': 7.658023,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 8, 19, 19, 22, 20, 14249),
+ 'httpcompression/response_bytes': 62409967,
+ 'httpcompression/response_count': 29,
+ 'item_scraped_count': 28,
+ 'log_count/DEBUG': 60,
+ 'log_count/INFO': 11,
+ 'memusage/max': 54910976,
+ 'memusage/startup': 54910976,
+ 'request_depth_max': 1,
+ 'response_received_count': 29,
+ 'scheduler/dequeued': 29,
+ 'scheduler/dequeued/memory': 29,
+ 'scheduler/enqueued': 29,
+ 'scheduler/enqueued/memory': 29,
+ 'start_time': datetime.datetime(2023, 8, 19, 19, 22, 12, 356226)}
+2023-08-19 15:22:20 [scrapy.core.engine] INFO: Spider closed (finished)
