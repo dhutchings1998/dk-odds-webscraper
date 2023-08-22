@@ -36,9 +36,10 @@ LOG_FILE = os.path.join(LOG_DIR, 'scrapy.log')
 #}
 
 
-#ITEM_PIPELINES = {
-#    "dk_odds_webscraper.pipelines.DkOddsWebscraperPipeline": 300,
-#}
+ITEM_PIPELINES = {
+    "dk_odds_webscraper.pipelines.MLBOddsWebscraperValidationPipeline": 200,
+   "dk_odds_webscraper.pipelines.MLBOddsWebscraperManipulationPipeline": 300,
+}
 
 
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
