@@ -4,7 +4,7 @@ import re
 import datetime
 from scrapy.exceptions import DropItem
 
-class MLBOddsWebscraperValidationPipeline:
+class DKOddsWebscraperValidationPipeline:
     def process_item(self, item, spider):
 
         ## validate that team names exist
@@ -46,9 +46,10 @@ class MLBOddsWebscraperValidationPipeline:
             raise DropItem(f'Invalid event time {item["event_time"]}')
         
         ## validate inning
-        if not self.isValidInning(item['inning']):
-            raise DropItem(f'Invalid inning {item["inning"]}')
-
+        if spider.name == 'mlboddsspider':
+            if not self.isValidInning(item['inning']):
+                raise DropItem(f'Invalid inning {item["inning"]}')
+            
         return item
     
     def isValidAmericanOdds(self, odds_str):
@@ -71,7 +72,7 @@ class MLBOddsWebscraperValidationPipeline:
         return re.match(pattern, line) is not None
     
     def isValidOverUnderLine(self, line):
-        if not line:
+        if len(line) == 0 or line is None:
             return True
         
         if len(line) != 3:
@@ -112,7 +113,7 @@ class MLBOddsWebscraperValidationPipeline:
         return re.match(pattern, inning_str) is not None
 
 
-class MLBOddsWebscraperManipulationPipeline:
+class DKOddsWebscraperManipulationPipeline:
     def process_item(self, item, spider):
         adapter = ItemAdapter(item)
         
@@ -125,8 +126,9 @@ class MLBOddsWebscraperManipulationPipeline:
         over_under_fields = ["team1_total_points_over_under", "team2_total_points_over_under"]
         for field in over_under_fields:
             value = adapter.get(field)
-            value['line'] = f'{value["line"][0]} {value["line"][2]}'
-            adapter[field] = value
+            if value['line'] != None and len(value['line']) == 3:
+                value['line'] = f'{value["line"][0]} {value["line"][2]}'
+                adapter[field] = value
     
     def format_event_date(self, adapter):
         event_date = adapter.get('event_date').lower()
@@ -138,9 +140,13 @@ class MLBOddsWebscraperManipulationPipeline:
         else:
             try:
                 parsed_date = parser.parse(event_date)
+                current_date = datetime.datetime.now()
+                if parsed_date.month < current_date.month:
+                    parsed_date = parsed_date.replace(year=parsed_date.year + 1)
+
                 formatted_date = self.get_formatted_date(parsed_date.date())
             except ValueError:
-                formatted_date = self.get_formatted_date(datetime.date.today() + datetime.timedelta(days=2))
+                formatted_date = None
         
         adapter['event_date'] = formatted_date
     
