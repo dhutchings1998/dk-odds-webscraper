@@ -1,2 +1,7 @@
 /.vscode
 /venv
+/logs
+notes.py
+data.json
+datanfl.json
+/__pycache__

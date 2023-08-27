@@ -1,5 +1,5 @@
 import scrapy 
-import time
+from datetime import datetime
 from dk_odds_webscraper.items import NFLGameItem
 
 class NFLOddsSpider(scrapy.Spider):
@@ -26,7 +26,7 @@ class NFLOddsSpider(scrapy.Spider):
                 nfl_game_item['team2_name'] = row2.css('div.event-cell__name-text::text').get()
                 
                 nfl_game_item['event_date'] = event_date
-                nfl_game_item['last_updated_utc'] = int(time.time())
+                nfl_game_item['update_timestamp'] = int(datetime.utcnow().timestamp())
 
                 nfl_game_item['team1_point_spread'] = {
                     'line': row1.css('td:nth-child(2) span.sportsbook-outcome-cell__line::text').get(),
@@ -54,12 +54,14 @@ class NFLOddsSpider(scrapy.Spider):
                     nfl_game_item['event_time'] = event_time
                     nfl_game_item['live'] = False
                     nfl_game_item['quarter'] = None
+                    nfl_game_item['period_time'] = None
                     nfl_game_item['team1_score'] = 0
                     nfl_game_item['team2_score'] = 0
                 else: # event is live
                     nfl_game_item['event_time'] = None
                     nfl_game_item['live'] = True
                     nfl_game_item['quarter'] = row1.css('span.event-cell__period::text').get()
+                    nfl_game_item['period_time'] = row1.css('span.event-cell__time::text').get()
                     nfl_game_item['team1_score'] = row1.css('span.event-cell__score::text').get()
                     nfl_game_item['team2_score'] = row2.css('span.event-cell__score::text').get()
 

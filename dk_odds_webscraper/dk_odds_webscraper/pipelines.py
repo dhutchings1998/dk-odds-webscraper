@@ -119,6 +119,7 @@ class DKOddsWebscraperManipulationPipeline:
         
         self.convert_over_under_lines(adapter)
         self.format_event_date(adapter)
+        self.format_odds_str(adapter)
         
         return item
     
@@ -152,6 +153,32 @@ class DKOddsWebscraperManipulationPipeline:
     
     def get_formatted_date(self, date):
         return date.strftime('%Y-%m-%d')
+    
+    def format_odds_str(self, adapter):
+        nested_odds_fields = ["team1_point_spread", "team2_point_spread", "team1_total_points_over_under", "team2_total_points_over_under"]
+        for field in nested_odds_fields:
+            value = adapter.get(field)
+            if value['odds'] is None:
+                continue
+            odds_str = value['odds']
+            if odds_str[0] != '+':
+                formatted_str = f'-{odds_str[1:]}'
+            else:
+                formatted_str = odds_str
+            value['odds'] = formatted_str
+            adapter[field] = value
+        
+        money_line_fields = ['team1_money_line', 'team2_money_line']
+        for field in money_line_fields:
+            odds_str = adapter.get(field)
+            if odds_str is None:
+                continue
+            if odds_str[0] != '+':
+                formatted_str = f'-{odds_str[1:]}'
+            else:
+                formatted_str = odds_str
+            adapter[field] = formatted_str
+
 
 
 
