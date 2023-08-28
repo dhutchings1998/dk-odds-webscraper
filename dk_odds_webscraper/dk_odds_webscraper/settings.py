@@ -37,9 +37,9 @@ LOG_FILE = os.path.join(LOG_DIR, 'scrapy.log')
 
 
 ITEM_PIPELINES = {
-    "dk_odds_webscraper.pipelines.DKOddsWebscraperValidationPipeline": 200,
-   "dk_odds_webscraper.pipelines.DKOddsWebscraperManipulationPipeline": 300,
-   "dk_odds_webscraper.pipelines.DatabaseWriter": 400,
+    "dk_odds_webscraper.pipelines.ValidationPipeline": 200,
+    "dk_odds_webscraper.pipelines.ManipulationPipeline": 300,
+    # "dk_odds_webscraper.pipelines.NFLDatabaseWriter": 400,
 }
 
 
