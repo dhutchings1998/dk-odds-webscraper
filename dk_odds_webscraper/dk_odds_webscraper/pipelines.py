@@ -2,6 +2,8 @@ from itemadapter import ItemAdapter
 from dateutil import parser
 import re
 import datetime
+import requests
+import json
 from scrapy.exceptions import DropItem
 
 class DKOddsWebscraperValidationPipeline:
@@ -117,19 +119,21 @@ class DKOddsWebscraperManipulationPipeline:
     def process_item(self, item, spider):
         adapter = ItemAdapter(item)
         
-        self.convert_over_under_lines(adapter)
+        self.format_over_under_lines(adapter)
         self.format_event_date(adapter)
         self.format_odds_str(adapter)
         
         return item
     
-    def convert_over_under_lines(self, adapter):
+    def format_over_under_lines(self, adapter):
         over_under_fields = ["team1_total_points_over_under", "team2_total_points_over_under"]
         for field in over_under_fields:
             value = adapter.get(field)
             if value['line'] != None and len(value['line']) == 3:
                 value['line'] = f'{value["line"][0]} {value["line"][2]}'
-                adapter[field] = value
+            else:
+                value['line'] = None
+            adapter[field] = value
     
     def format_event_date(self, adapter):
         event_date = adapter.get('event_date').lower()
@@ -178,6 +182,21 @@ class DKOddsWebscraperManipulationPipeline:
             else:
                 formatted_str = odds_str
             adapter[field] = formatted_str
+
+
+class DatabaseWriter:
+    def process_item(self, item, spider):
+
+        url = 'http://localhost:8000/nfl/games'
+        response = requests.post(url, json=dict(item))
+
+        if response.status_code == 200:
+            print('successful write')
+        else:
+            print('error writing to database:')
+            print(response)
+
+        return item
 
 
 
