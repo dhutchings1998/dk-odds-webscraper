@@ -1,10 +1,37 @@
-import scrapy 
+import scrapy
+import requests
 from datetime import datetime
 from dk_odds_webscraper.items import NFLGameItem
 
 class NFLOddsSpider(scrapy.Spider):
     name = 'nfloddsspider'
     start_urls = ['https://sportsbook.draftkings.com/leagues/football/nfl?category=game-lines&subcategory=game']
+
+    custom_settings = {
+        'ITEM_PIPELINES': {
+            "dk_odds_webscraper.pipelines.ValidationPipeline": 200,
+            "dk_odds_webscraper.pipelines.ManipulationPipeline": 300,
+            "dk_odds_webscraper.pipelines.NFLDatabaseWriterPipeline": 400,
+        }
+    }
+
+    @classmethod
+    def from_crawler(cls, crawler, *args, **kwargs):
+        spider = super(NFLOddsSpider, cls).from_crawler(crawler, *args, **kwargs)
+        crawler.signals.connect(spider.spider_closed, signal=scrapy.signals.spider_closed)
+        return spider
+    
+    def spider_closed(self, spider):
+        url = 'https://z8jt2djc6i.us-east-1.awsapprunner.com/api/v1/nfl/games/settle'
+        response = requests.post(url)
+
+        if response.status_code == 200:
+            spider.logger.info("Settled games")
+            print('settled games')
+        else:
+            print(f'{response.status_code}: {response.text}')
+
+        spider.logger.info("Spider closed: %s", spider.name)
 
     def parse(self, response):
 
@@ -26,7 +53,7 @@ class NFLOddsSpider(scrapy.Spider):
                 nfl_game_item['team2_name'] = row2.css('div.event-cell__name-text::text').get()
                 
                 nfl_game_item['event_date'] = event_date
-                nfl_game_item['update_timestamp'] = int(datetime.utcnow().timestamp())
+                nfl_game_item['update_timestamp'] = int(datetime.now().timestamp())
 
                 nfl_game_item['team1_point_spread'] = {
                     'line': row1.css('td:nth-child(2) span.sportsbook-outcome-cell__line::text').get(),
@@ -66,3 +93,4 @@ class NFLOddsSpider(scrapy.Spider):
                     nfl_game_item['team2_score'] = row2.css('span.event-cell__score::text').get()
 
                 yield nfl_game_item
+

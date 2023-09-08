@@ -1,7 +1,7 @@
-/.vscode
 /venv
-/logs
+.vscode
+logs/
 notes.py
-data.json
 datanfl.json
-/__pycache__
+__pycache__/
+scrapy.log

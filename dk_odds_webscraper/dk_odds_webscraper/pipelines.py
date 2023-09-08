@@ -68,15 +68,13 @@ class ManipulationPipeline:
 
 class NFLDatabaseWriterPipeline:
     def process_item(self, item, spider):
-
-        url = 'http://localhost:8000/nfl/games'
+        url = 'https://z8jt2djc6i.us-east-1.awsapprunner.com/api/v1/nfl/games'
         response = requests.post(url, json=dict(item))
 
         if response.status_code == 200:
             print('successful write')
         else:
-            print('error writing to database:')
-            print(response)
+            print(f'{response.status_code}: {response.text}')
 
         return item
 
