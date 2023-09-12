@@ -9,9 +9,6 @@ ROBOTSTXT_OBEY = False
 
 SCRAPEOPS_API_KEY = os.getenv("SCRAPEOPS_API_KEY")
 
-if SCRAPEOPS_API_KEY is None:
-    print("SCRAPEOPS_API_KEY is not set.")
-
 
 EXTENSIONS = {
     'scrapeops_scrapy.extension.ScrapeOpsMonitor': 500, 
