@@ -26,14 +26,16 @@ SCRAPEOPS_SETTINGS_EXCLUSION_LIST = [
     'API_KEY', 'APIKEY', 'SECRET_KEY', 'SECRETKEY'
 ]
 
-LOG_ENABLED = True
-LOG_LEVEL = 'DEBUG'  # Set the desired log level
-LOG_FORMAT = '%(asctime)s [%(name)s] %(levelname)s: %(message)s'
-LOG_DATEFORMAT = '%Y-%m-%d %H:%M:%S'
+LOG_LEVEL = 'ERROR'
 
-# Configure log file
-LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'logs')
-LOG_FILE = os.path.join(LOG_DIR, 'scrapy.log')
+# LOG_ENABLED = True
+# LOG_LEVEL = 'DEBUG'  # Set the desired log level
+# LOG_FORMAT = '%(asctime)s [%(name)s] %(levelname)s: %(message)s'
+# LOG_DATEFORMAT = '%Y-%m-%d %H:%M:%S'
+
+# # Configure log file
+# LOG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'logs')
+# LOG_FILE = os.path.join(LOG_DIR, 'scrapy.log')
 
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
