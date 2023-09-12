@@ -22,7 +22,7 @@ class NFLOddsSpider(scrapy.Spider):
         return spider
     
     def spider_closed(self, spider):
-        url = 'https://z8jt2djc6i.us-east-1.awsapprunner.com/api/v1/nfl/games/settle'
+        url = 'https://sportsbookstatsapi.com/api/v1/nfl/games/settle'
         response = requests.post(url)
 
         if response.status_code == 200:

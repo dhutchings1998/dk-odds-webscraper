@@ -1,6 +1,6 @@
 /venv
 .vscode
-logs/
+/logs
 notes.py
 datanfl.json
 __pycache__/
