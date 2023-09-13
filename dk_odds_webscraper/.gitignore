@@ -1,7 +1,0 @@
-/venv
-.vscode
-/logs
-notes.py
-datanfl.json
-__pycache__/
-scrapy.log
