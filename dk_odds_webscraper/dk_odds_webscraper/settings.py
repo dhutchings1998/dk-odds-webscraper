@@ -7,17 +7,17 @@ NEWSPIDER_MODULE = "dk_odds_webscraper.spiders"
 
 ROBOTSTXT_OBEY = False
 
-SCRAPEOPS_API_KEY = os.getenv("SCRAPEOPS_API_KEY")
+# SCRAPEOPS_API_KEY = os.getenv("SCRAPEOPS_API_KEY")
 
 
-EXTENSIONS = {
-    'scrapeops_scrapy.extension.ScrapeOpsMonitor': 500, 
-}
+# EXTENSIONS = {
+#     'scrapeops_scrapy.extension.ScrapeOpsMonitor': 500, 
+# }
 
-DOWNLOADER_MIDDLEWARES = {
-    'scrapeops_scrapy.middleware.retry.RetryMiddleware': 550,
-    'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
-}
+# DOWNLOADER_MIDDLEWARES = {
+#     'scrapeops_scrapy.middleware.retry.RetryMiddleware': 550,
+#     'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
+# }
 
 SCRAPEOPS_SETTINGS_EXCLUSION_LIST = [
     'API_KEY', 'APIKEY', 'SECRET_KEY', 'SECRETKEY'
