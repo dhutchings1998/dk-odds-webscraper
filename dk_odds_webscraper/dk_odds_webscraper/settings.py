@@ -19,11 +19,11 @@ ROBOTSTXT_OBEY = False
 #     'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
 # }
 
-SCRAPEOPS_SETTINGS_EXCLUSION_LIST = [
-    'API_KEY', 'APIKEY', 'SECRET_KEY', 'SECRETKEY'
-]
+# SCRAPEOPS_SETTINGS_EXCLUSION_LIST = [
+#     'API_KEY', 'APIKEY', 'SECRET_KEY', 'SECRETKEY'
+# ]
 
-LOG_LEVEL = 'ERROR'
+# LOG_LEVEL = 'ERROR'
 
 # LOG_ENABLED = True
 # LOG_LEVEL = 'DEBUG'  # Set the desired log level

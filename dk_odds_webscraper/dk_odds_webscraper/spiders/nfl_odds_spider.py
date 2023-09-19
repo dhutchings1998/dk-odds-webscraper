@@ -11,7 +11,7 @@ class NFLOddsSpider(scrapy.Spider):
         'ITEM_PIPELINES': {
             "dk_odds_webscraper.pipelines.ValidationPipeline": 200,
             "dk_odds_webscraper.pipelines.ManipulationPipeline": 300,
-            "dk_odds_webscraper.pipelines.NFLDatabaseWriterPipeline": 400,
+            "dk_odds_webscraper.pipelines.DatabaseWriterPipeline": 400,
         }
     }
 

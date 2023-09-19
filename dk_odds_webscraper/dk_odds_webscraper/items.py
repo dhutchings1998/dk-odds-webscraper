@@ -14,6 +14,7 @@ class MLBGameItem(scrapy.Item):
     team2_money_line = scrapy.Field()
     live = scrapy.Field()
     inning = scrapy.Field()
+    period_time = scrapy.Field()
     team1_score = scrapy.Field()
     team2_score = scrapy.Field()
 

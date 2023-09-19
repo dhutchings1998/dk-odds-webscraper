@@ -66,9 +66,13 @@ class ManipulationPipeline:
     
 
 
-class NFLDatabaseWriterPipeline:
+class DatabaseWriterPipeline:
     def process_item(self, item, spider):
-        url = 'https://sportsbookstatsapi.com/api/v1/nfl/games'
+        if spider.name == 'nfloddsspider':
+            url = 'https://sportsbookstatsapi.com/api/v1/nfl/games'
+        elif spider.name == 'mlboddsspider':
+            url = 'https://sportsbookstatsapi.com/api/v1/mlb/games'
+        
         response = requests.post(url, json=dict(item))
 
         if response.status_code == 200:
